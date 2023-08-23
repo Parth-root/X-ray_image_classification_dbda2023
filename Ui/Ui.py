@@ -22,6 +22,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg
 def img_process(img):
     img = np.array(img) / 255
     #img = img.reshape(-1, 200, 200, 1)
+    img = img.reshape(200, 200)
     return img
 
 def PneumoniaPrediction(img):
