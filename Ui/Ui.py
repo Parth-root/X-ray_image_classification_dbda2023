@@ -19,10 +19,13 @@ st.header("Upload an Image and Process It")
 # Upload image through Streamlit UI
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 
+def img_process(img)
+    img = np.array(img) / 255
+    #img = img.reshape(-1, 200, 200, 1)
+    return img
 
 def PneumoniaPrediction(img):
-    img = np.array(img) / 255
-    img = img.reshape(-1, 200, 200, 1)
+   
     isPneumonic = model.predict(img)[0]
     print(isPneumonic)
     if isPneumonic < 0.0001:
@@ -38,30 +41,10 @@ def PneumoniaPrediction(img):
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     #st.image(image, caption='Uploaded Image', use_column_width=True)
-    #resized_image = image.resize((200, 200))
-
-    max_dimension = 200
-
-    # Calculate new dimensions while preserving aspect ratio
-    width, height = image.size
-    if width > height:
-        new_width = max_dimension
-        new_height = int(height * (max_dimension / width))
-    else:
-        new_height = max_dimension
-        new_width = int(width * (max_dimension / height))
-
-    # Resize the image while preserving aspect ratio
-    resized_image = image.resize((new_width, new_height))
-
-
-
-    
-  
-    #resized_image = image.reshape(-1,1)
-    st.image(resized_image, caption='Uploaded Image', use_column_width=True)
-    #resized_image.show()
-    ans=PneumoniaPrediction(image)
+    #resized_image = image.resize((200, 200))    
+    resized_image=img_process(image)
+    st.image(resized_image, caption='Uploaded Image')#, use_column_width=True)
+    ans=PneumoniaPrediction(img_process(image))
    
 
     # Convert image to numpy array
