@@ -50,7 +50,7 @@ if uploaded_file is not None:
 
     # Your image processing code here
     # For example, you could apply filters, transformations, etc.
-    processed_image = image_array  # Placeholder for demonstration
+    #processed_image = image_array  # Placeholder for demonstration
     st.title(ans)
     # Display processed image
     st.image(processed_image, caption='Processed Image', use_column_width=True)
