@@ -40,7 +40,7 @@ def PneumoniaPrediction(img):
 # Process the uploaded image
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, caption='Uploaded Image', use_column_width=True)
+    #st.image(image, caption='Uploaded Image', use_column_width=True)
     resized_image = image.resize((200, 200))
     ans=PneumoniaPrediction(resized_image)
    
@@ -50,7 +50,7 @@ if uploaded_file is not None:
 
     # Your image processing code here
     # For example, you could apply filters, transformations, etc.
-    #processed_image = image_array  # Placeholder for demonstration
+    processed_image = image_array  # Placeholder for demonstration
     st.title(ans)
     # Display processed image
     st.image(processed_image, caption='Processed Image', use_column_width=True)
