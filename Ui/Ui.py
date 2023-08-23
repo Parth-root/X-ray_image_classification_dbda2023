@@ -19,7 +19,7 @@ st.header("Upload an Image and Process It")
 # Upload image through Streamlit UI
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 
-def img_process(img)
+def img_process(img):
     img = np.array(img) / 255
     #img = img.reshape(-1, 200, 200, 1)
     return img
