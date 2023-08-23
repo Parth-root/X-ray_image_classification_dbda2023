@@ -6,9 +6,9 @@ import numpy as np
 import keras
 
 
-filename = 'https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5'
+#filename = 'https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5'
+filename = './your_model.h5'
 model = keras.models.load_model(filename)
-
 
 from PIL import Image
 
