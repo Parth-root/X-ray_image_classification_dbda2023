@@ -61,7 +61,7 @@ if uploaded_file is not None:
     #resized_image = image.reshape(-1,1)
     st.image(resized_image, caption='Uploaded Image', use_column_width=True)
     #resized_image.show()
-    ans=PneumoniaPrediction(resized_image)
+    ans=PneumoniaPrediction(image)
    
 
     # Convert image to numpy array
