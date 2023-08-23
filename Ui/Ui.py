@@ -40,7 +40,8 @@ def PneumoniaPrediction(img):
 # Process the uploaded image
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    ans=PneumoniaPrediction(uploaded_file)
+    
+    ans=PneumoniaPrediction(image)
     st.image(image, caption='Uploaded Image', use_column_width=True)
 
     # Convert image to numpy array
