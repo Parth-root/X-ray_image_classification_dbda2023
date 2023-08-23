@@ -1,9 +1,14 @@
 import os
-
 import streamlit as st
 import pickle
 import numpy as np
 import keras
+
+import urllib.request
+
+urllib.request.urlretrieve(
+        'https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5', 'your_model.h5')
+
 
 #filename = 'https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5'
 filename = './your_model.h5'
