@@ -28,8 +28,8 @@ def PneumoniaPrediction(img):
     img = img.reshape(-1, 200, 200, 1)
     isPneumonic = model.predict(img)[0]
     print(isPneumonic)
-    if isPneumonic == 1:
-        imgClass = "Normal"
+    if isPneumonic < 0.0001:
+        imgClass = "Unknown image"
     elif isPneumonic < 0.5:
         imgClass = "Normal"
     else:
