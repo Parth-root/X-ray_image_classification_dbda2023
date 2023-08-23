@@ -1,11 +1,8 @@
 import os
-
 import streamlit as st
 import pickle
 import numpy as np
 import keras
-
-
 #import urllib.request
 
 #urllib.request.urlretrieve('https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5', 'your_model.h5')
@@ -41,7 +38,8 @@ def PneumoniaPrediction(img):
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     #st.image(image, caption='Uploaded Image', use_column_width=True)
-    resized_image = image.resize((200, 200))
+    #resized_image = image.resize((200, 200))
+    resized_image = image.reshape(-1,1)
     st.image(resized_image, caption='Uploaded Image', use_column_width=True)
     #resized_image.show()
     ans=PneumoniaPrediction(resized_image)
