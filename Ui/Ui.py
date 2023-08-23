@@ -1,10 +1,14 @@
+import os
+
 import streamlit as st
 import pickle
 import numpy as np
 import keras
 
-filename = 'your_model.h5'
+
+filename = 'https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5'
 model = keras.models.load_model(filename)
+
 
 from PIL import Image
 
