@@ -46,7 +46,7 @@ if uploaded_file is not None:
     #st.image(image, caption='Uploaded Image', use_column_width=True)
     #resized_image = image.resize((200, 200))    
     resized_image=img_process(image)
-    st.image(resized_image, caption='Uploaded Image')#, use_column_width=True)
+    st.image(resized_image, caption='Uploaded Image', use_column_width=False)
     ans=PneumoniaPrediction(img_process(image))
    
 
