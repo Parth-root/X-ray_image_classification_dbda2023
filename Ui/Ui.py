@@ -6,13 +6,11 @@ import numpy as np
 import keras
 
 
-import urllib.request
+#import urllib.request
 
-urllib.request.urlretrieve('https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5', 'your_model.h5')
-
-
+#urllib.request.urlretrieve('https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5', 'your_model.h5')
 #filename = 'https://github.com/Parth-root/X-ray_image_classification_dbda2023/blob/main/Ui/your_model.h5'
-filename = './your_model.h5'
+filename = 'Ui/your_model.h5'
 model = keras.models.load_model(filename)
 
 from PIL import Image
