@@ -39,7 +39,24 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     #st.image(image, caption='Uploaded Image', use_column_width=True)
     #resized_image = image.resize((200, 200))
-    resized_image= image.crop((0,0,200,200))
+
+    max_dimension = 200
+
+    # Calculate new dimensions while preserving aspect ratio
+    width, height = image.size
+    if width > height:
+        new_width = max_dimension
+        new_height = int(height * (max_dimension / width))
+    else:
+        new_height = max_dimension
+        new_width = int(width * (max_dimension / height))
+
+    # Resize the image while preserving aspect ratio
+    resized_image = image.resize((new_width, new_height))
+
+
+
+    
   
     #resized_image = image.reshape(-1,1)
     st.image(resized_image, caption='Uploaded Image', use_column_width=True)
