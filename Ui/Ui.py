@@ -22,17 +22,13 @@ def PneumoniaPrediction(img):
 
 def img_proess(img):
     pil_image =img
-    
-    # Determine the side length for the square crop
-    side_length = min(pil_image.size)*1.4 #1.4 to make more usefull image
-    print(side_length)
-    
+        # Determine the side length for the square crop
+    side_length = min(pil_image.size)*1.4 #1.4 to make more usefull image    
     # Calculate cropping box for center cropping
     left = (pil_image.width - side_length) //2
     top = (pil_image.height - side_length) //2
     right = (pil_image.width + side_length)//2
     bottom = (pil_image.height + side_length) //2
-    
     # Perform the center crop to make the image square
     square_cropped_image = pil_image.crop((left, top, right, bottom))
     final_image=square_cropped_image.resize((200,200),Image.BOX)
