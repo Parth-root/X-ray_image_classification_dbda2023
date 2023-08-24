@@ -23,7 +23,7 @@ def img_process(img):
     #img = np.array(img) / 255
     #img = img.reshape(-1, 200, 200, 1)
     #img = img.reshape(200, 200)
-    img = img.resize(200, 200)
+    #img = img.resize(200, 200)
 
     return img
 
