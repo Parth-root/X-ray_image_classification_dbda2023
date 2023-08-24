@@ -52,7 +52,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg
 if uploaded_file is not None:
     image_temp = Image.open(uploaded_file)
     image=img_proess(image_temp)
-    ans=img_proess(image)
+    ans=PneumoniaPrediction(image)
     st.title(ans)
     st.image(image, caption='Uploaded Image after process', use_column_width=True)
    
