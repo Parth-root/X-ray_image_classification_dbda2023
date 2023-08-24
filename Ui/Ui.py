@@ -13,7 +13,7 @@ def PneumoniaPrediction(img):
     isPneumonic = model.predict(img)[0]
     print(isPneumonic)
     if isPneumonic <0.15:
-        imgClass = "unknown or bad image"
+        imgClass = "Normal"
     elif isPneumonic<0.7:
         imgClass = "Normal"
     else:
