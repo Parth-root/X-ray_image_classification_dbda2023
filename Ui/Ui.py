@@ -33,14 +33,14 @@ def img_proess(img):
     square_cropped_image = pil_image.crop((left, top, right, bottom))
     final_image=square_cropped_image.resize((200,200),Image.BOX)
     return final_image
-'''
+
 #this code not work in stremlit cloud so use in future
-def img_proess_V2(img):
-    img_size = 200
+#def img_proess_V2(img):
+#    img_size = 200
     #img_arr = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
-    resized_arr = cv2.resize(img, (img_size, img_size))
-    return resized_arr
-'''    
+#    resized_arr = cv2.resize(img, (img_size, img_size))
+#    return resized_arr
+    
 # Set the title and header
 st.title("chest x-ray image classification for covid-19 detection for pneumonia")
 st.header("Upload an Image and Process It")
@@ -51,7 +51,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg
 # Process the uploaded image
 if uploaded_file is not None:
     image_temp = Image.open(uploaded_file)
-    image=img_proess_V2(image_temp)
+    image=img_proess(image_temp)
     ans=img_proess(image)
     st.title(ans)
     st.image(image, caption='Uploaded Image after process', use_column_width=True)
