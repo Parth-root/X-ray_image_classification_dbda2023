@@ -9,8 +9,6 @@ model = keras.models.load_model(filename)
 
 def PneumoniaPrediction(img):
     img = np.array(img)/255
-    plt.imshow(img)
-    plt.show()
     img = img.reshape(-1, 200, 200, 1)
     isPneumonic = model.predict(img)[0]
     print(isPneumonic)
