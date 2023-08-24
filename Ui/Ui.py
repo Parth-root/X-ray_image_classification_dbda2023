@@ -35,8 +35,8 @@ def img_proess(img):
     return final_image
 def img_proess_V2(img):
     img_size = 200
-    img_arr = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
-    resized_arr = cv2.resize(img_arr, (img_size, img_size))
+    #img_arr = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
+    resized_arr = cv2.resize(img, (img_size, img_size))
     return resized_arr
     
 # Set the title and header
