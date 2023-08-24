@@ -45,8 +45,9 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg
 if uploaded_file is not None:
     image_temp = Image.open(uploaded_file)
     image=img_proess(image_temp)
-    st.image(image, caption='Uploaded Image after process', use_column_width=True)
     ans=PneumoniaPrediction(image)
+    st.title(ans)
+    st.image(image, caption='Uploaded Image after process', use_column_width=True)
    
 
     # Convert image to numpy array
@@ -55,6 +56,6 @@ if uploaded_file is not None:
     # Your image processing code here
     # For example, you could apply filters, transformations, etc.
     processed_image = image_array  # Placeholder for demonstration
-    st.title(ans)
+   
     # Display processed image
     #st.image(processed_image, caption='Processed Image', use_column_width=True)
