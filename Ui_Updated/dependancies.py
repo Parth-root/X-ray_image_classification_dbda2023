@@ -213,11 +213,11 @@ def patient_form():
       mob = st.text_input("Enter patient's Mobile")
       if st.form_submit_button(":green[Submit]"):
           patient_info(name,age,mob)
-          import Ui
-          PAGES = {
-            "Page 1": Ui
-            }
-          session_state.current_page = "Page 1"
+          #import Ui
+          #PAGES = {
+          #  "Page 1": Ui
+          #  }
+          #session_state.current_page = "Page 1"
 
 def send_pass(email,new_pass):
 
