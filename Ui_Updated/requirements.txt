@@ -1,0 +1,7 @@
+streamlit
+streamlit_authenticator
+deta
+streamlit_lottie
+keras
+tensorflow
+opencv-python==4.8.0.76
