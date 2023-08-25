@@ -1,12 +1,12 @@
 import os
-#import streamlit as st
+import streamlit as st
 import numpy as np
-#import keras
+import keras
 #import cv2
 from PIL import Image
-filename = 'Ui/Pneumonia_model_final.h5'
+filename = '/Ui_Updated/Pneumonia_model_final.h5'
 filename = 'Pneumonia_model_final.h5'
-model = 123#keras.models.load_model(filename)
+model = keras.models.load_model(filename)
 
 def app():
     #st.title("Page 2")
