@@ -4,8 +4,8 @@ import numpy as np
 import keras
 #import cv2
 from PIL import Image
-filename = '/Ui_Updated/Pneumonia_model_final.h5'
-filename = 'Pneumonia_model_final.h5'
+filename = 'Ui_Updated/Pneumonia_model_final.h5'
+#filename = 'Pneumonia_model_final.h5'
 model = keras.models.load_model(filename)
 
 def app():
