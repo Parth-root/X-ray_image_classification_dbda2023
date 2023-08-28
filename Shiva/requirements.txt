@@ -1,0 +1,7 @@
+streamlit
+streamlit_authenticator
+deta
+streamlit_lottie
+numpy
+opencv-python
+tensorflow --no-cache-dir
