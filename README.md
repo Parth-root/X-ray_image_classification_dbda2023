@@ -1,3 +1,3 @@
 # hospital_image_classification_dbda2023
 '''
-https://x-rayimageclassificationdbda2023-hjaxmlvmetx67bumxwyuc3.streamlit.app
+http://13.200.59.188:8501/
