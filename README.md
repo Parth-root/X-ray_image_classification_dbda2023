@@ -1,3 +1,3 @@
-# hospital_image_classification_dbda2023
+#Pneumonia Detection in Chest X-ray Images Using Machine Learning
 '''
 http://13.200.59.188:8501/
